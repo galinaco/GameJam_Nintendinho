@@ -1,48 +1,99 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.U2D;
 
 public class Move_Personagem : MonoBehaviour
 {
+
     //componentes 
     Rigidbody2D rg;
     SpriteRenderer sprite;
-    
+
 
     //checks
-    [SerializeField] float rccheckachao = 0.1f;
+    bool taandando = false;
 
     //estado do personagem
-    enum State { Idle, Andando, Pulo, Caindo }
+    enum State { Idle, AndandoHorizontal, AndandoVertical, AtaqueEspada }
     State estadoatual = State.Idle;
 
     //movimentação base
+    [Header("Movimento Base")]
     Vector3 movimento = new Vector3();
     [SerializeField] float velocidadejogador = 5f;
+    Vector2 inputmovimento = new Vector2();
 
-    //pulo
-    [SerializeField] float forcapulo = 7f;
 
     //inputs
-    bool inputpulo;
+    bool inputhorizontal;
+    bool inputvertical;
+    bool inputataque;
+
+    //mira
+    Vector2 ultimoinputmovimento;
+    [SerializeField] Transform mira;
+
+    //ataque 
+    [Header(" Variaveis Ataque Espada")]
+    [SerializeField] float tempototalataque = 0.5f;
+    [SerializeField] float tempoataqueatual;
+    [SerializeField] GameObject hitboxataque;
+
+
+    //defesa
+    [Header(" Variaveis Defesa Escudo")]
+    [SerializeField] float tempototaldefesa = 0.5f;
+    [SerializeField] float tempoadefesaatual;
+    [SerializeField] GameObject hitboxdefesa;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        tempoataqueatual = tempototalataque;
         rg = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, Vector2.down * rccheckachao, Color.red);
-        inputpulo = Input.GetKey(KeyCode.Space);
+        switch (estadoatual)
+        {
+            case State.Idle: Idle(); break;
+            case State.AndandoHorizontal: AndandoHorizontal(); break;
+            case State.AndandoVertical: AndandoVertical(); break;
+            case State.AtaqueEspada: AtaqueEspada(); break;
+        }
+        //check de inputs
+        inputmovimento = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        inputataque = Input.GetKeyDown(KeyCode.J);
+
     }
 
     private void FixedUpdate()
     {
-        movimento = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        transform.position += movimento * velocidadejogador * Time.deltaTime;
-        movimento.Normalize();
+
+
+
+        //rotacionar a mira baseado no input de movimento, se não tiver input de movimento, rotacionar a mira baseado no ultimo input de movimento
+        if (inputmovimento != Vector2.zero)
+        {
+            ultimoinputmovimento = inputmovimento;
+            Vector3 vector3 = Vector3.left * inputmovimento.x + Vector3.down * inputmovimento.y;
+            mira.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+
+        }
+        else if (!taandando)
+        {
+            Debug.Log("ta parado");
+
+            Vector3 direcao = Vector3.left * ultimoinputmovimento.x + Vector3.down * ultimoinputmovimento.y;
+
+            if (direcao != Vector3.zero)
+            {
+                mira.rotation = Quaternion.LookRotation(Vector3.forward, direcao);
+            }
+
+        }
 
         if (movimento.x > 0f)
         {
@@ -50,94 +101,144 @@ public class Move_Personagem : MonoBehaviour
         }
         else if (movimento.x < 0f)
         {
-           // sprite.flipX = true;
+            // sprite.flipX = true;
         }
-        switch (estadoatual)
-        {
-            case State.Idle: Idle(); break;
-            case State.Pulo: Pulo(); break;
-            case State.Caindo: Caindo(); break;
-            case State.Andando: Andando(); break;
-        }
+
+        // Debug.Log("input movimento: " + inputmovimento);
+
     }
 
     void Idle()
     {
         //comportamento do estado
-        
+        taandando = false;
 
         //transições de estado
-        if (movimento.x != 0)
+        if (inputmovimento.x != 0)
         {
-            estadoatual = State.Andando;
+            estadoatual = State.AndandoHorizontal;
         }
 
-        else if (inputpulo && CheckaTaNoChao())
+        else if (inputmovimento.y != 0)
         {
-            estadoatual = State.Pulo;
+            estadoatual = State.AndandoVertical;
         }
+
+        else if (inputataque)
+        {
+            estadoatual = State.AtaqueEspada;
+        }
+
     }
 
-    void Andando()
+    void AndandoHorizontal()
     {
         //comportamento do estado
+        taandando = true;
 
-       
+        movimento = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+        movimento.Normalize();
+        transform.position += movimento * velocidadejogador * Time.fixedDeltaTime;
+
+
+
+        //Debug.Log("movimento horizontal: " + movimento * velocidadejogador * Time.fixedDeltaTime);
 
         //transições de estado
-        if (inputpulo && CheckaTaNoChao())
-        {
-            estadoatual = State.Pulo;
-        }
-        else if (movimento.x == 0)
+
+        if (movimento.x == 0)
         {
             estadoatual = State.Idle;
         }
+        else if (inputataque)
+        {
+            estadoatual = State.AtaqueEspada;
+        }
+
     }
-
-    void Pulo()
-    {
-
-        //comportamento do estado
-        
-
-        //animatorjogador.Play("Animação começo pulo");
-        Debug.Log("entrou no estado de pulo");
-
-        rg.linearVelocity = Vector2.up * forcapulo;
-        //rg.AddForce(new Vector2(0f, forcapulo), ForceMode2D.Impulse);
-
-        //transições
-        estadoatual = State.Caindo;
-    }
-
-    void Caindo()
+    void AndandoVertical()
     {
         //comportamento do estado
-        if (rg.linearVelocity.y > 0f)
-        {
-            //animatorjogador.Play("Animação meio pulo");
-        }
-        else
-        {
-            //animatorjogador.Play("Animação caindo");
-        }
-        //transições
-        if (CheckaTaNoChao() && movimento.x == 0)
+        taandando = true;
+        movimento = new Vector3(0, Input.GetAxisRaw("Vertical"), 0);
+        movimento.Normalize();
+        transform.position += movimento * velocidadejogador * Time.fixedDeltaTime;
+        //Debug.Log("movimento vertical: " + movimento * velocidadejogador * Time.fixedDeltaTime);
+
+        //transições de estado
+        if (movimento.y == 0)
         {
             estadoatual = State.Idle;
         }
 
-        if (CheckaTaNoChao() && movimento.x != 0)
+        else if (inputataque)
         {
-            estadoatual = State.Andando;
+            estadoatual = State.AtaqueEspada;
         }
     }
 
-    //metodo que verifica se o player esta no chão
-    private bool CheckaTaNoChao()
+
+    void AtaqueEspada()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, rccheckachao, LayerMask.GetMask("chao"));
+
+        tempoataqueatual -= Time.fixedDeltaTime;
+
+        //comportamento do estado
+        hitboxataque.SetActive(true);
+
+
+        //transições de estado
+
+        if (tempoataqueatual <= 0)
+        {
+            tempoataqueatual = tempototalataque;
+            hitboxataque.SetActive(false);
+            if (inputmovimento.x != 0)
+            {
+                estadoatual = State.AndandoHorizontal;
+            }
+            else if (inputmovimento.y != 0)
+            {
+                estadoatual = State.AndandoVertical;
+            }
+            else
+            {
+                estadoatual = State.Idle;
+            }
+        }
+
+    }
+    void DefesaEscudo()
+    {
+
+        tempoadefesaatual -= Time.fixedDeltaTime;
+
+        //comportamento do estado
+        hitboxataque.SetActive(true);
+
+
+        //transições de estado
+
+        if (tempoadefesaatual <= 0)
+        {
+            tempoadefesaatual = tempototalataque;
+            hitboxataque.SetActive(false);
+            if (inputmovimento.x != 0)
+            {
+                estadoatual = State.AndandoHorizontal;
+            }
+            else if (inputmovimento.y != 0)
+            {
+                estadoatual = State.AndandoVertical;
+            }
+            else
+            {
+                estadoatual = State.Idle;
+            }
+        }
+
+
+
     }
 }
 
