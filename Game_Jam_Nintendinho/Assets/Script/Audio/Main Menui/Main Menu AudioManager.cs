@@ -22,17 +22,17 @@ public class MainMenuAudioManager : MonoBehaviour
     {
         
     }
-    void PlayMainMenuMusic()
+    public void PlayMainMenuMusic()
     {
         mainMenuMusicInstance = RuntimeManager.CreateInstance(mainMenuMusic);
         mainMenuMusicInstance.start();
     }
-    void StopMainMenuMusic()
+    public void StopMainMenuMusic()
     {
         mainMenuMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mainMenuMusicInstance.release();
     }
-    void PlayButtonClickSound()
+    public void PlayButtonClickSound()
     {
         RuntimeManager.PlayOneShot(buttonClickSound);
     }

@@ -15,16 +15,20 @@ public class MainMenuManager : MonoBehaviour
     {
         
     }
-    void PlayGame()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Cenateste");
     }
-    void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
-    void Options()
+    public void Options()
     {
         optionsMenu.SetActive(true);
+    }
+    public void BackOptions()
+    {
+        optionsMenu.SetActive(false);
     }
 }
