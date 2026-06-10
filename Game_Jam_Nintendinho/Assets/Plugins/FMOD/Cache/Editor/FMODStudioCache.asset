@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2759872005571058598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639166380357944948
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2650346230416513964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFXs.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/SFXs.bank
+  Name: SFXs
+  StudioPath: bank:/SFXs
+  lastModified: 639166380358375773
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-970871222915750026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/OSTs.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/OSTs.bank
+  Name: OSTs
+  StudioPath: bank:/OSTs
+  lastModified: 639166380358231114
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-759149847401781217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VOs.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/VOs.bank
+  Name: VOs
+  StudioPath: bank:/VOs
+  lastModified: 639166380358421106
+  FileSizes: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
+  EditorBanks:
+  - {fileID: 7717926468157025583}
+  - {fileID: 1335505951165550705}
+  - {fileID: -2759872005571058598}
+  - {fileID: -970871222915750026}
+  - {fileID: -2650346230416513964}
+  - {fileID: -759149847401781217}
+  EditorEvents: []
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2759872005571058598}
+  StringsBanks:
+  - {fileID: 7717926468157025583}
+  cacheVersion: 131859
+  cacheTime: 639166380358421106
+  SerializableEventsDict:
+  - key: event:/Ambiences/Dungeon
+    index: 0
+  - key: event:/Ambiences/Stage Selection
+    index: 1
+  - key: event:/Ambiences/Inverted Controls
+    index: 2
+  - key: event:/OSTs/Second Dungeon
+    index: 3
+  - key: event:/OSTs/Title Screen
+    index: 4
+  - key: event:/OSTs/First Dungeon
+    index: 5
+  - key: event:/OSTs/Boss Fight
+    index: 6
+  - key: event:/SFXs/UI/Press Pause
+    index: 7
+  - key: event:/SFXs/Scenery/Curse Worsen
+    index: 8
+  - key: event:/SFXs/Title/Buttons
+    index: 9
+  - key: event:/SFXs/UI/Select Boss
+    index: 10
+  - key: event:/SFXs/Player/Attack
+    index: 11
+  - key: event:/SFXs/Scenery/Broke Jewel
+    index: 12
+  - key: event:/SFXs/Title/Rolling Text
+    index: 13
+  - key: event:/SFXs/Scenery/Key Collect
+    index: 14
+  - key: event:/SFXs/Scenery/Trap Activate
+    index: 15
+  - key: event:/SFXs/Title/Play
+    index: 16
+  - key: event:/SFXs/Player/Death
+    index: 17
+  - key: event:/SFXs/Scenery/Win Jingle
+    index: 18
+  - key: event:/SFXs/Scenery/Locked Door
+    index: 19
+  - key: event:/SFXs/Title/Gameplay Start
+    index: 20
+  - key: event:/SFXs/UI/Enter Stage Selection
+    index: 21
+  - key: event:/SFXs/Scenery/Screen Flicker
+    index: 22
+  - key: event:/SFXs/Scenery/Game Win Jingle
+    index: 23
+  - key: event:/SFXs/Player/Interact
+    index: 24
+  - key: event:/SFXs/UI/Chose Stage
+    index: 25
+  - key: event:/SFXs/Player/Hurt
+    index: 26
+  - key: event:/SFXs/Enemies/Witch Boss/Witch Attack
+    index: 27
+  - key: event:/SFXs/UI/Press Button
+    index: 28
+  - key: event:/SFXs/Scenery/Boss Arena Color Change
+    index: 29
+  - key: event:/SFXs/Scenery/Door Open
+    index: 30
+--- !u!114 &1335505951165550705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AMBIENCEs.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/AMBIENCEs.bank
+  Name: AMBIENCEs
+  StudioPath: bank:/AMBIENCEs
+  lastModified: 639166380357750232
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7717926468157025583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639166380357984099
+  FileSizes:
+  - Name: 
+    Value: 2584
+  Exists: 1
