@@ -14,12 +14,12 @@ public class Move_Personagem : MonoBehaviour
     bool taandando = false;
 
     //estado do personagem
-    enum State { Idle, AndandoHorizontal, AndandoVertical, AtaqueEspada }
+    enum State { Idle, AndandoHorizontal, AndandoVertical, AtaqueEspada, DefesaEscudo }
     State estadoatual = State.Idle;
 
     //movimentação base
     [Header("Movimento Base")]
-    Vector3 movimento = new Vector3();
+    Vector2 movimento = new Vector2();
     [SerializeField] float velocidadejogador = 5f;
     Vector2 inputmovimento = new Vector2();
 
@@ -28,7 +28,7 @@ public class Move_Personagem : MonoBehaviour
     bool inputhorizontal;
     bool inputvertical;
     bool inputataque;
-
+    bool inputdefesa;
     //mira
     Vector2 ultimoinputmovimento;
     [SerializeField] Transform mira;
@@ -56,16 +56,20 @@ public class Move_Personagem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //troca de estudados
         switch (estadoatual)
         {
             case State.Idle: Idle(); break;
             case State.AndandoHorizontal: AndandoHorizontal(); break;
             case State.AndandoVertical: AndandoVertical(); break;
             case State.AtaqueEspada: AtaqueEspada(); break;
+            case State.DefesaEscudo: DefesaEscudo(); break;
         }
+
         //check de inputs
         inputmovimento = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         inputataque = Input.GetKeyDown(KeyCode.J);
+        inputdefesa = Input.GetKeyDown(KeyCode.K);
 
     }
 
@@ -129,6 +133,11 @@ public class Move_Personagem : MonoBehaviour
             estadoatual = State.AtaqueEspada;
         }
 
+        else if (inputdefesa)
+        {
+            estadoatual = State.DefesaEscudo;
+        }
+
     }
 
     void AndandoHorizontal()
@@ -136,9 +145,10 @@ public class Move_Personagem : MonoBehaviour
         //comportamento do estado
         taandando = true;
 
-        movimento = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+        movimento = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         movimento.Normalize();
-        transform.position += movimento * velocidadejogador * Time.fixedDeltaTime;
+        rg.MovePosition(rg.position + movimento * velocidadejogador * Time.fixedDeltaTime);
+        
 
 
 
@@ -154,15 +164,19 @@ public class Move_Personagem : MonoBehaviour
         {
             estadoatual = State.AtaqueEspada;
         }
-
+        else if (inputdefesa)
+        {
+            estadoatual = State.DefesaEscudo;
+        }
     }
     void AndandoVertical()
     {
         //comportamento do estado
         taandando = true;
-        movimento = new Vector3(0, Input.GetAxisRaw("Vertical"), 0);
+        movimento = new Vector2(0, Input.GetAxisRaw("Vertical"));
         movimento.Normalize();
-        transform.position += movimento * velocidadejogador * Time.fixedDeltaTime;
+        rg.MovePosition(rg.position + movimento * velocidadejogador * Time.fixedDeltaTime);
+        
         //Debug.Log("movimento vertical: " + movimento * velocidadejogador * Time.fixedDeltaTime);
 
         //transições de estado
@@ -175,6 +189,8 @@ public class Move_Personagem : MonoBehaviour
         {
             estadoatual = State.AtaqueEspada;
         }
+
+
     }
 
 
@@ -214,15 +230,15 @@ public class Move_Personagem : MonoBehaviour
         tempoadefesaatual -= Time.fixedDeltaTime;
 
         //comportamento do estado
-        hitboxataque.SetActive(true);
+        hitboxdefesa.SetActive(true);
 
 
         //transições de estado
 
         if (tempoadefesaatual <= 0)
         {
-            tempoadefesaatual = tempototalataque;
-            hitboxataque.SetActive(false);
+            tempoadefesaatual = tempototaldefesa;
+            hitboxdefesa.SetActive(false);
             if (inputmovimento.x != 0)
             {
                 estadoatual = State.AndandoHorizontal;
