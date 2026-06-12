@@ -7,10 +7,15 @@ public class SistemadeVida : MonoBehaviour
     [Header("Vida do Personagem")]
     [SerializeField] float vida = 5f;
 
+    //audio References
+    [Header("Audio References")]
+    [SerializeField] private PlayerAudioManager playerAudioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        
+    {  
+        //finds the playeraudio manager
+       playerAudioManager = FindFirstObjectByType<PlayerAudioManager>(); 
     }
 
     // Update is called once per frame
@@ -23,7 +28,11 @@ public class SistemadeVida : MonoBehaviour
 
         vida -= dano;
         if (vida <= 0)
-        {
+        {   
+            //calls death audio function
+            playerAudioManager.Death();
+
+
             Morrer();
         }
     }
@@ -33,11 +42,14 @@ public class SistemadeVida : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Quem recebeu a colisão: " + gameObject.name);
+        //Debug.Log("Quem recebeu a colisï¿½o: " + gameObject.name);
        // Debug.Log("Colidiu com: " + collision.name);
         if (collision.gameObject.CompareTag("Hazard") || collision.gameObject.CompareTag("Inimigo"))
         {
+            //calls hurt audio function
+            playerAudioManager.Hurt();
 
+            
             DanoRecebido(1f);
         }
     }

@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 916703293}
   - component: {fileID: 916703292}
   - component: {fileID: 916703297}
+  - component: {fileID: 916703298}
   m_Layer: 0
   m_Name: jogador
   m_TagString: Untagged
@@ -643,6 +644,10 @@ MonoBehaviour:
   tempototaldefesa: 0.5
   tempoadefesaatual: 0
   hitboxdefesa: {fileID: 2142906166}
+  playerAudioManager: {fileID: 0}
+  shot: 0
+  defended: 0
+  interacted: 0
 --- !u!50 &916703293
 Rigidbody2D:
   serializedVersion: 5
@@ -803,6 +808,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SistemadeVida
   vida: 5
+  playerAudioManager: {fileID: 0}
+--- !u!114 &916703298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916703291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a536ac049c7db46b05334ac91bc402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
+  attackEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  interactEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  collectKeyEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  doorOpenEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  hurtEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  deathEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  petrifyEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  curseWorsenEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  movePersonagem: {fileID: 0}
+  sistemaDeVida: {fileID: 0}
 --- !u!1 &1041319227
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +1056,7 @@ GameObject:
   - component: {fileID: 1235716445}
   - component: {fileID: 1235716446}
   - component: {fileID: 1235716447}
+  - component: {fileID: 1235716448}
   m_Layer: 0
   m_Name: Espada_Hitbox
   m_TagString: Espada
@@ -1137,6 +1214,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1235716448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235716443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1944964414
+      Data2: 1198446425
+      Data3: -79135818
+      Data4: 1770358901
+    Path: event:/SFXs/Player/Attack
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1423512847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1587,7 @@ GameObject:
   - component: {fileID: 2142906168}
   - component: {fileID: 2142906169}
   - component: {fileID: 2142906170}
+  - component: {fileID: 2142906171}
   m_Layer: 0
   m_Name: Escudo_Hitbox
   m_TagString: Untagged
@@ -1632,6 +1741,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2142906171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142906166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -431283999
+      Data2: 1130989793
+      Data3: -1371467890
+      Data4: 919037902
+    Path: event:/SFXs/Player/Defend
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

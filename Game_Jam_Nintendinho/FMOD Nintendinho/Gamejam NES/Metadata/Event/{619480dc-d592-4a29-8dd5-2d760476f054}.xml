@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{619480dc-d592-4a29-8dd5-2d760476f054}">
 		<property name="name">
-			<value>Inverted Controls</value>
+			<value>Curse Worsen_Inverted Controls</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
