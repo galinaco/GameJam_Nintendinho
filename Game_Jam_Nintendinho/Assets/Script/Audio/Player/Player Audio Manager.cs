@@ -22,8 +22,6 @@ public class PlayerAudioManager : MonoBehaviour
     
     [SerializeField] private EventReference petrifyEvent;
     private EventInstance petrifyInstance;
-    [SerializeField] private EventReference curseWorsenEvent;
-    private EventInstance curseWorsenInstance;
 
     //code references
     [Header("Code References")]
@@ -42,7 +40,6 @@ public class PlayerAudioManager : MonoBehaviour
         hurtEvent = RuntimeManager.PathToEventReference("event:/SFXs/Player/Hurt");
         deathEvent = RuntimeManager.PathToEventReference("event:/SFXs/Player/Death");
         petrifyEvent = RuntimeManager.PathToEventReference("event:/SFXs/Player/Petrify");
-        curseWorsenEvent = RuntimeManager.PathToEventReference("event:/Ambiences/Curse Worsen_Inverted Controls");
     }
     public void Attack()
     {   
@@ -83,16 +80,6 @@ public class PlayerAudioManager : MonoBehaviour
         petrifyInstance = RuntimeManager.CreateInstance(petrifyEvent);
         petrifyInstance.start();
         petrifyInstance.release();
-    }
-    public void CurseWorsen()
-    {
-        curseWorsenInstance = RuntimeManager.CreateInstance(curseWorsenEvent);
-        curseWorsenInstance.start();
-    }
-    public void CurseWorsenStop()
-    {
-        curseWorsenInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        curseWorsenInstance.release();
     }
 
     // Update is called once per frame

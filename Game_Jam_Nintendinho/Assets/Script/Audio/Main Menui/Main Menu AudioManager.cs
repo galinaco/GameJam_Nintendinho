@@ -9,7 +9,9 @@ public class MainMenuAudioManager : MonoBehaviour
     [SerializeField] private EventReference buttonClickSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
+    {   
+        mainMenuMusic = RuntimeManager.PathToEventReference("event:/OSTs/Title Screen");
+        buttonClickSound = RuntimeManager.PathToEventReference("event:/SFXs/Title/Buttons");
         PlayMainMenuMusic();
     }
     void OnDestroy()
