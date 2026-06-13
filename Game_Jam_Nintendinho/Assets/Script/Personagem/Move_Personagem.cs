@@ -56,7 +56,7 @@ public class Move_Personagem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //troca de estudados
+        //troca de estados
         switch (estadoatual)
         {
             case State.Idle: Idle(); break;
