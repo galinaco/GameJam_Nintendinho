@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639168888703923278
+  lastModified: 639169042563475958
   FileSizes: []
   Exists: 1
 --- !u!114 &-7512511730320922392
@@ -90,6 +90,33 @@ MonoBehaviour:
     Data2: 1103857421
     Data3: 2015082395
     Data4: 2053992902
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5533467971417441186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Skeleton/Attack
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Skeleton/Attack
+  Guid:
+    Data1: -945401221
+    Data2: 1082975956
+    Data3: -1062199874
+    Data4: -566747314
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -159,7 +186,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 639168889622227412
+  lastModified: 639169042564296057
   FileSizes: []
   Exists: 1
 --- !u!114 &-4111755457784296861
@@ -351,6 +378,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2515413491495772618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Kobold/Death
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Kobold/Death
+  Guid:
+    Data1: 1651490118
+    Data2: 1097532266
+    Data3: -262059090
+    Data4: 2042910326
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1885328222494598604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +432,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1868322476540432464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Armor/Hurt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Armor/Hurt
+  Guid:
+    Data1: -2049246617
+    Data2: 1311330112
+    Data3: -871049341
+    Data4: 1577600350
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1791751857640108107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Skeleton/Death
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Skeleton/Death
+  Guid:
+    Data1: -1016865828
+    Data2: 1155711282
+    Data3: 1926694576
+    Data4: 2053150902
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1780587652577402924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +504,33 @@ MonoBehaviour:
     Data2: 1243098161
     Data3: -1574862445
     Data4: 762465603
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-378578181182326893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Armor/Death
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Armor/Death
+  Guid:
+    Data1: -749828524
+    Data2: 1261578892
+    Data3: 1613820823
+    Data4: -2114637943
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -457,13 +592,23 @@ MonoBehaviour:
   - {fileID: 7917130471688184753}
   - {fileID: -3114641091269962637}
   - {fileID: -3198599593952392576}
+  - {fileID: 6581423001399152505}
+  - {fileID: 2762174310175487826}
+  - {fileID: -2515413491495772618}
+  - {fileID: -378578181182326893}
+  - {fileID: -1868322476540432464}
+  - {fileID: 4897387537113944412}
+  - {fileID: 1456864982519047979}
+  - {fileID: -5533467971417441186}
+  - {fileID: 2744606083647986613}
+  - {fileID: -1791751857640108107}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7748251136923703988}
   StringsBanks:
   - {fileID: 1000194892633964672}
   cacheVersion: 131859
-  cacheTime: 639168889622227412
+  cacheTime: 639169042564296057
   SerializableEventsDict:
   - key: event:/Ambiences/Dungeon
     index: 0
@@ -529,6 +674,26 @@ MonoBehaviour:
     index: 30
   - key: event:/SFXs/Player/Defend
     index: 31
+  - key: event:/SFXs/Enemies/Kobold/Hurt
+    index: 32
+  - key: event:/SFXs/Enemies/Kobold/Shoot
+    index: 33
+  - key: event:/SFXs/Enemies/Kobold/Death
+    index: 34
+  - key: event:/SFXs/Enemies/Armor/Death
+    index: 35
+  - key: event:/SFXs/Enemies/Armor/Hurt
+    index: 36
+  - key: event:/SFXs/Enemies/Skeleton/Hurt
+    index: 37
+  - key: event:/SFXs/Enemies/Witch Boss/Hurt
+    index: 38
+  - key: event:/SFXs/Enemies/Skeleton/Attack
+    index: 39
+  - key: event:/SFXs/Enemies/Armor/Attack
+    index: 40
+  - key: event:/SFXs/Enemies/Skeleton/Death
+    index: 41
 --- !u!114 &513684967010346221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,10 +763,10 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639168888703948656
+  lastModified: 639169042563496010
   FileSizes:
   - Name: 
-    Value: 2638
+    Value: 3078
   Exists: 1
 --- !u!114 &1259099435251016000
 MonoBehaviour:
@@ -657,6 +822,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1456864982519047979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Witch Boss/Hurt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Witch Boss/Hurt
+  Guid:
+    Data1: 545038713
+    Data2: 1271949568
+    Data3: -1432875106
+    Data4: -1984350196
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2456093365955817731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +885,60 @@ MonoBehaviour:
     Data2: 1303504552
     Data3: -1425275771
     Data4: -349929755
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2744606083647986613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Armor/Attack
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Armor/Attack
+  Guid:
+    Data1: 1839861168
+    Data2: 1224423117
+    Data3: -323002994
+    Data4: -647105519
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2762174310175487826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Kobold/Shoot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Kobold/Shoot
+  Guid:
+    Data1: -432385216
+    Data2: 1232601047
+    Data3: -537012558
+    Data4: -735425940
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -837,6 +1083,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4897387537113944412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Skeleton/Hurt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Skeleton/Hurt
+  Guid:
+    Data1: 1448229493
+    Data2: 1089307802
+    Data3: -584002379
+    Data4: 1934383341
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6011364195631934319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +1128,33 @@ MonoBehaviour:
     Data2: 1099199631
     Data3: 1225895054
     Data4: -205464221
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6581423001399152505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Enemies/Kobold/Hurt
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Enemies/Kobold/Hurt
+  Guid:
+    Data1: 364282144
+    Data2: 1177443197
+    Data3: -1482593128
+    Data4: 350976415
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
