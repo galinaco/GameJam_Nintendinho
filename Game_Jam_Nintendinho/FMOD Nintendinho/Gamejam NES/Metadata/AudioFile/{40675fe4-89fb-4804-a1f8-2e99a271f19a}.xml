@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{40675fe4-89fb-4804-a1f8-2e99a271f19a}">
+		<property name="assetPath">
+			<value>Audios/SFXs/CD_SFX_Level_Win_Jingle.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2010430839002268</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d5e5bcc8-b4cc-4449-9cc3-fae681dafc89}</destination>
+		</relationship>
+	</object>
+</objects>
