@@ -46,12 +46,12 @@ public class Portas : MonoBehaviour
             else if(cima == true)
             {
                 collision.gameObject.transform.position = new Vector2(Saida.position.x,Saida.position.y +0.8f);
-                posicaocamera.position = new Vector3(objcamera.transform.position.x, objcamera.transform.position.y + 12.6f,objcamera.transform.position.z);
+                posicaocamera.position = new Vector3(objcamera.transform.position.x, objcamera.transform.position.y + 10.71f,objcamera.transform.position.z);
             }
             else if(baixo == true)
             {
                 collision.gameObject.transform.position = new Vector2(Saida.position.x,Saida.position.y -0.8f);
-                posicaocamera.position = new Vector3(objcamera.transform.position.x, objcamera.transform.position.y - 12.6f, objcamera.transform.position.z);
+                posicaocamera.position = new Vector3(objcamera.transform.position.x, objcamera.transform.position.y - 10.71f, objcamera.transform.position.z);
             }
             objcamera.transform.position = posicaocamera.position;
 
