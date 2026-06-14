@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 4833645104900550108}
   - component: {fileID: 6628796438658570183}
   - component: {fileID: 1268141419191472580}
+  - component: {fileID: 5486325691727359665}
   m_Layer: 0
   m_Name: jogador
   m_TagString: jogador
@@ -357,6 +358,10 @@ MonoBehaviour:
   tempototaldefesa: 0.5
   tempoadefesaatual: 0
   hitboxdefesa: {fileID: 8997159054968893584}
+  playerAudioManager: {fileID: 0}
+  shot: 0
+  defended: 0
+  interacted: 0
 --- !u!114 &1268141419191472580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +375,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SistemadeVida
   vida: 5
+  playerAudioManager: {fileID: 0}
+--- !u!114 &5486325691727359665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808151854829962731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a536ac049c7db46b05334ac91bc402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
+  attackEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  interactEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  collectKeyEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  doorOpenEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  hurtEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  deathEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  petrifyEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  movePersonagem: {fileID: 0}
+  sistemaDeVida: {fileID: 0}
 --- !u!1 &8445255208188498899
 GameObject:
   m_ObjectHideFlags: 0
