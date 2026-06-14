@@ -8,8 +8,8 @@ public class Portas : MonoBehaviour
     [SerializeField] Transform Saida;
 
     [Header("Variaveis camera")]
-    [SerializeField] GameObject objcamera;
-    [SerializeField] Transform posicaocamera;
+    /*[SerializeField]*/ GameObject objcamera;
+    /*[SerializeField]*/ Transform posicaocamera;
 
     [Header("Onde a Porta tá?")]
     //[SerializeField] int posporta;
@@ -21,6 +21,7 @@ public class Portas : MonoBehaviour
     void Start()
     {
       objcamera = GameObject.FindGameObjectWithTag("MainCamera");
+      posicaocamera = objcamera.transform;
     }
 
     // Update is called once per frame
