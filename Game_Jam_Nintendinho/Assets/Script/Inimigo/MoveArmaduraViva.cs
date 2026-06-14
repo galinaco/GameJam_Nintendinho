@@ -66,7 +66,7 @@ public class MoveArmaduraViva : MonoBehaviour
         //transição de estado
         if (Mathf.Abs(transform.position.x - GameObject.FindGameObjectWithTag("jogador").transform.position.x) < 0.1f)
         {
-            if (Mathf.Abs(transform.position.y - GameObject.FindGameObjectWithTag("jogador").transform.position.y)< 0.1f)
+            if (Mathf.Abs(transform.position.y - GameObject.FindGameObjectWithTag("jogador").transform.position.y)> 0.1f)
                 estadoatual = State.AndandoVertical;
             else 
             {
@@ -84,15 +84,16 @@ public class MoveArmaduraViva : MonoBehaviour
         inimigo.rb.MovePosition(inimigo.rb.position + direcao * inimigo.velocidade * Time.fixedDeltaTime);
 
         //transição de estado
-        if (transform.position.y == GameObject.FindGameObjectWithTag("jogador").transform.position.y
-            && transform.position.x != GameObject.FindGameObjectWithTag("jogador").transform.position.x)
+        if (Mathf.Abs(transform.position.y - GameObject.FindGameObjectWithTag("jogador").transform.position.y) < 0.1f)
         {
-            estadoatual = State.AndandoHorizontal;
-        }
-        else if (transform.position.x == GameObject.FindGameObjectWithTag("jogador").transform.position.x
-            && transform.position.y == GameObject.FindGameObjectWithTag("jogador").transform.position.y)
-        {
-            estadoatual = State.Idle;
+            if (Mathf.Abs(transform.position.x - GameObject.FindGameObjectWithTag("jogador").transform.position.x) > 0.1f)
+                estadoatual = State.AndandoHorizontal;
+            else
+            {
+                estadoatual = State.Idle;
+            }
         }
     }
+
+    
 }
