@@ -1,7 +1,13 @@
 using UnityEngine;
+using FMOD;
+using FMODUnity;
+using FMOD.Studio;
 
 public class ArmorAudioManager : MonoBehaviour
 {
+
+    [Header("Audio Clips")]
+    [SerializeField] private EventReference hitSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +18,9 @@ public class ArmorAudioManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void PlayHitSound()
+    {
+        RuntimeManager.PlayOneShot(hitSound);
     }
 }

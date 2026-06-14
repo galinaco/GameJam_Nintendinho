@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9033402954571539261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/Scenery/Boss Arena Color Change
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/Scenery/Boss Arena Color Change
-  Guid:
-    Data1: -1243625258
-    Data2: 1321739253
-    Data3: 53141658
-    Data4: 985566222
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8541021017492940674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7822331928273305846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/Title/Hower
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/Title/Hower
+  Guid:
+    Data1: -1095768690
+    Data2: 1329859375
+    Data3: 808300462
+    Data4: -1074046450
+  Banks:
+  - {fileID: -4291416199950972524}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7748251136923703988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639169042563475958
+  lastModified: 639170450786006471
   FileSizes: []
   Exists: 1
 --- !u!114 &-7512511730320922392
@@ -126,33 +126,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4728246108625703813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/UI/Chose Stage
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/UI/Chose Stage
-  Guid:
-    Data1: 217818554
-    Data2: 1336396742
-    Data3: 1416422307
-    Data4: -1108058428
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4666347419724939086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +141,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/AMBIENCEs.bank
   Name: AMBIENCEs
   StudioPath: bank:/AMBIENCEs
-  lastModified: 639168869177168223
+  lastModified: 639170423996685808
   FileSizes: []
   Exists: 1
 --- !u!114 &-4291416199950972524
@@ -186,7 +159,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 639169047283705545
+  lastModified: 639170450786616902
   FileSizes: []
   Exists: 1
 --- !u!114 &-4111755457784296861
@@ -209,7 +182,7 @@ MonoBehaviour:
     Data4: -613420597
   Banks:
   - {fileID: -4291416199950972524}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -243,33 +216,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3962751647286063742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/UI/Enter Stage Selection
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/UI/Enter Stage Selection
-  Guid:
-    Data1: -360274267
-    Data2: 1258287402
-    Data3: 189181604
-    Data4: -336124448
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-3198599593952392576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +236,7 @@ MonoBehaviour:
     Data4: 919037902
   Banks:
   - {fileID: -4291416199950972524}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -315,33 +261,6 @@ MonoBehaviour:
     Data2: 1217935567
     Data3: -1922855758
     Data4: -1203632422
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2793639306579076628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/UI/Select Boss
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/UI/Select Boss
-  Guid:
-    Data1: 1904472632
-    Data2: 1301227699
-    Data3: -525461362
-    Data4: -1694923348
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -396,33 +315,6 @@ MonoBehaviour:
     Data2: 1097532266
     Data3: -262059090
     Data4: 2042910326
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1885328222494598604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/Scenery/Locked Door
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/Scenery/Locked Door
-  Guid:
-    Data1: 1122319758
-    Data2: 1193050806
-    Data3: 1811700352
-    Data4: -1829028453
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -568,26 +460,20 @@ MonoBehaviour:
   - {fileID: -4005531860383775516}
   - {fileID: 7377130453782783684}
   - {fileID: 7846424352254003216}
-  - {fileID: -2793639306579076628}
   - {fileID: 8136549323252861627}
   - {fileID: -8541021017492940674}
   - {fileID: 2476636866817478426}
   - {fileID: -7512511730320922392}
   - {fileID: 4070705977131890711}
-  - {fileID: 1259099435251016000}
   - {fileID: 7812495909972321659}
   - {fileID: 6011364195631934319}
-  - {fileID: -1885328222494598604}
   - {fileID: 7977688763298183924}
-  - {fileID: -3962751647286063742}
   - {fileID: -1780587652577402924}
   - {fileID: 963397528806105259}
   - {fileID: 1441863407080311758}
-  - {fileID: -4728246108625703813}
   - {fileID: -4111755457784296861}
   - {fileID: 4629428930360654177}
   - {fileID: -2707698471677516821}
-  - {fileID: -9033402954571539261}
   - {fileID: 513684967010346221}
   - {fileID: 7917130471688184753}
   - {fileID: -3114641091269962637}
@@ -602,13 +488,14 @@ MonoBehaviour:
   - {fileID: -5533467971417441186}
   - {fileID: 2744606083647986613}
   - {fileID: -1791751857640108107}
+  - {fileID: -7822331928273305846}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7748251136923703988}
   StringsBanks:
   - {fileID: 1000194892633964672}
   cacheVersion: 131859
-  cacheTime: 639169047283705545
+  cacheTime: 639170450786616902
   SerializableEventsDict:
   - key: event:/Ambiences/Dungeon
     index: 0
@@ -626,74 +513,64 @@ MonoBehaviour:
     index: 6
   - key: event:/SFXs/Title/Buttons
     index: 7
-  - key: event:/SFXs/UI/Select Boss
-    index: 8
   - key: event:/SFXs/Player/Attack
-    index: 9
+    index: 8
   - key: event:/SFXs/Scenery/Broke Jewel
-    index: 10
+    index: 9
   - key: event:/SFXs/Title/Rolling Text
-    index: 11
+    index: 10
   - key: event:/SFXs/Scenery/Key Collect
-    index: 12
+    index: 11
   - key: event:/SFXs/Scenery/Trap Activate
-    index: 13
-  - key: event:/SFXs/Title/Play
-    index: 14
+    index: 12
   - key: event:/SFXs/Player/Death
-    index: 15
+    index: 13
   - key: event:/SFXs/Scenery/Win Jingle
-    index: 16
-  - key: event:/SFXs/Scenery/Locked Door
-    index: 17
+    index: 14
   - key: event:/SFXs/Title/Gameplay Start
-    index: 18
-  - key: event:/SFXs/UI/Enter Stage Selection
-    index: 19
+    index: 15
   - key: event:/SFXs/Scenery/Screen Flicker
-    index: 20
+    index: 16
   - key: event:/SFXs/Scenery/Game Win Jingle
-    index: 21
+    index: 17
   - key: event:/SFXs/Player/Interact
-    index: 22
-  - key: event:/SFXs/UI/Chose Stage
-    index: 23
+    index: 18
   - key: event:/SFXs/Player/Hurt
-    index: 24
+    index: 19
   - key: event:/SFXs/Enemies/Witch Boss/Witch Attack
-    index: 25
+    index: 20
   - key: event:/SFXs/UI/Press Button
-    index: 26
-  - key: event:/SFXs/Scenery/Boss Arena Color Change
-    index: 27
+    index: 21
   - key: event:/SFXs/Scenery/Door Open
-    index: 28
+    index: 22
   - key: event:/Ambiences/Curse Worsen_Inverted Controls
-    index: 29
+    index: 23
   - key: event:/SFXs/Player/Petrify
-    index: 30
+    index: 24
   - key: event:/SFXs/Player/Defend
-    index: 31
+    index: 25
   - key: event:/SFXs/Enemies/Kobold/Hurt
-    index: 32
+    index: 26
   - key: event:/SFXs/Enemies/Kobold/Shoot
-    index: 33
+    index: 27
   - key: event:/SFXs/Enemies/Kobold/Death
-    index: 34
+    index: 28
   - key: event:/SFXs/Enemies/Armor/Death
-    index: 35
+    index: 29
   - key: event:/SFXs/Enemies/Armor/Hurt
-    index: 36
+    index: 30
   - key: event:/SFXs/Enemies/Skeleton/Hurt
-    index: 37
+    index: 31
   - key: event:/SFXs/Enemies/Witch Boss/Hurt
-    index: 38
+    index: 32
   - key: event:/SFXs/Enemies/Skeleton/Attack
-    index: 39
+    index: 33
   - key: event:/SFXs/Enemies/Armor/Attack
-    index: 40
+    index: 34
   - key: event:/SFXs/Enemies/Skeleton/Death
-    index: 41
+    index: 35
+  - key: event:/SFXs/Title/Hower
+    index: 36
 --- !u!114 &513684967010346221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,38 +640,11 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639169042563496010
+  lastModified: 639170450786026515
   FileSizes:
   - Name: 
-    Value: 3078
+    Value: 2824
   Exists: 1
---- !u!114 &1259099435251016000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/Title/Play
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/Title/Play
-  Guid:
-    Data1: 100818814
-    Data2: 1139503067
-    Data3: -1943609939
-    Data4: 843402561
-  Banks:
-  - {fileID: -4291416199950972524}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1441863407080311758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,7 +665,7 @@ MonoBehaviour:
     Data4: 1165337272
   Banks:
   - {fileID: -4291416199950972524}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -1283,7 +1133,7 @@ MonoBehaviour:
     Data4: 1118969084
   Banks:
   - {fileID: -4291416199950972524}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -1343,7 +1193,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 687
 --- !u!114 &7977688763298183924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,10 +1208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/SFXs/Title/Gameplay Start
   Guid:
-    Data1: -1095768690
-    Data2: 1329859375
-    Data3: 808300462
-    Data4: -1074046450
+    Data1: 100818814
+    Data2: 1139503067
+    Data3: -1943609939
+    Data4: 843402561
   Banks:
   - {fileID: -4291416199950972524}
   IsStream: 0
@@ -1391,7 +1241,7 @@ MonoBehaviour:
     Data4: 1770358901
   Banks:
   - {fileID: -4291416199950972524}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []

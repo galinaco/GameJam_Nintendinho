@@ -5,7 +5,7 @@
 			<value>Hurt</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{10ae5dfd-a4cc-4563-9f80-4edd7dae5eda}</destination>
@@ -82,7 +82,11 @@
 			<destination>{b0d00c14-fa94-4f4c-80ca-396935b48791}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{a02f0e5b-d057-40e6-96c0-6f684b2d44f8}" />
+	<object class="MultiSound" id="{a02f0e5b-d057-40e6-96c0-6f684b2d44f8}">
+		<relationship name="sounds">
+			<destination>{07848636-1034-4e90-873c-e7ceb0fcf3ab}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{0392d2e0-abc2-42ca-bfc3-efc44c083fc1}">
 		<relationship name="effects">
 			<destination>{7dcb08e9-6820-4830-9055-bea644cf3e7e}</destination>
@@ -92,9 +96,22 @@
 	<object class="MixerBusEffectChain" id="{23839821-3565-4406-a016-8719f654aa82}">
 		<relationship name="effects">
 			<destination>{82cccf6e-66e2-4dbf-84ef-8335c83d994e}</destination>
+			<destination>{93338ec2-8b6d-441d-ba20-3de05f625992}</destination>
+			<destination>{31bcdc32-f2bf-4d59-bba3-74a52a40bcb3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{87000ca8-513e-40b0-bde7-ef56e42eeb40}" />
+	<object class="SingleSound" id="{07848636-1034-4e90-873c-e7ceb0fcf3ab}">
+		<relationship name="audioFile">
+			<destination>{42f37205-eb85-4251-a420-bd1a2418e319}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{7dcb08e9-6820-4830-9055-bea644cf3e7e}" />
 	<object class="MixerBusFader" id="{82cccf6e-66e2-4dbf-84ef-8335c83d994e}" />
+	<object class="PitchShifterEffect" id="{93338ec2-8b6d-441d-ba20-3de05f625992}" />
+	<object class="FlangerEffect" id="{31bcdc32-f2bf-4d59-bba3-74a52a40bcb3}">
+		<property name="rate">
+			<value>0.199999988</value>
+		</property>
+	</object>
 </objects>

@@ -5,7 +5,7 @@
 			<value>Curse Worsen_Inverted Controls</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{aea6cd80-e92c-4c43-b05d-bb26eb3954fb}</destination>
@@ -59,11 +59,18 @@
 	<object class="EventAutomatableProperties" id="{bfb5953f-4832-4e65-9987-abe8c1e733f1}" />
 	<object class="MarkerTrack" id="{b173f1c4-289c-4d5b-8655-7275ab5429c7}" />
 	<object class="GroupTrack" id="{b61d671e-8d3b-404e-8631-db463e049277}">
+		<relationship name="modules">
+			<destination>{3eb6f2c1-4fd6-476e-9cbf-d6935014d0f4}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{84d8518e-98dd-4482-9285-fec113dc12c7}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{641c49fb-6d86-49ff-9191-43b6ffe87004}" />
+	<object class="Timeline" id="{641c49fb-6d86-49ff-9191-43b6ffe87004}">
+		<relationship name="modules">
+			<destination>{3eb6f2c1-4fd6-476e-9cbf-d6935014d0f4}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{e0a73be8-a099-4c9a-88f3-a5985e501c86}">
 		<relationship name="effectChain">
 			<destination>{07a6c1a4-6072-48ff-8088-c3d7576dd4a2}</destination>
@@ -81,6 +88,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d53fdbb6-6b4e-408d-904a-72618d6a56a1}" />
+	<object class="SingleSound" id="{3eb6f2c1-4fd6-476e-9cbf-d6935014d0f4}">
+		<property name="length">
+			<value>0.68786848072562357</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{1e86a5aa-2e74-4704-b550-6b0ed090eb28}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{84d8518e-98dd-4482-9285-fec113dc12c7}">
 		<property name="name">
 			<value>Audio 1</value>

@@ -5,7 +5,7 @@
 			<value>Broke Jewel</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e3ddc8f2-33ff-4bd0-922a-90bdff06d92f}</destination>
@@ -82,7 +82,11 @@
 			<destination>{c2d7c917-da6e-49ad-9f79-22748041ec7f}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{e22231c3-5204-4524-b760-e2f1a8f44654}" />
+	<object class="MultiSound" id="{e22231c3-5204-4524-b760-e2f1a8f44654}">
+		<relationship name="sounds">
+			<destination>{8e6b5389-6b39-4147-b3ae-7cbeadd2cc8f}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{4e7d53b4-4787-4748-a29b-77e2bd6ddda1}">
 		<relationship name="effects">
 			<destination>{20fcef06-853e-4e7a-8629-6572f2eb0bad}</destination>
@@ -95,6 +99,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{aa7bb2c1-b231-4843-9740-025f14e36859}" />
+	<object class="SingleSound" id="{8e6b5389-6b39-4147-b3ae-7cbeadd2cc8f}">
+		<property name="startOffset">
+			<value>7.5</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{84d9d22f-1979-4235-a15c-2fc3e882963f}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{20fcef06-853e-4e7a-8629-6572f2eb0bad}" />
 	<object class="MixerBusFader" id="{36488e53-4fa0-421b-a96b-4afe04a2871d}" />
 </objects>

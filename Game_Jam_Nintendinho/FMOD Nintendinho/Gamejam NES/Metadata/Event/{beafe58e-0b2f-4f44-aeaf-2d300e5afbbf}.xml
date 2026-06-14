@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{beafe58e-0b2f-4f44-aeaf-2d300e5afbbf}">
 		<property name="name">
-			<value>Gameplay Start</value>
+			<value>Hower</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{263101c2-9494-4458-946a-8a7fe00b0123}</destination>
@@ -82,7 +82,11 @@
 			<destination>{4612b339-14e8-48d4-badc-101e83da6cd3}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{91eac27e-163a-4fd8-98c9-89af07bbf081}" />
+	<object class="MultiSound" id="{91eac27e-163a-4fd8-98c9-89af07bbf081}">
+		<relationship name="sounds">
+			<destination>{2631ec52-14ee-4f4c-9d3e-ff35cbbdca2f}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{56c45fcf-d69b-4deb-ae6d-afed43256912}">
 		<relationship name="effects">
 			<destination>{208304ed-cbf2-48e4-b2b7-bdd90db851fd}</destination>
@@ -95,6 +99,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d10be860-8ea2-4ad9-83d2-486a4b9aae16}" />
+	<object class="SingleSound" id="{2631ec52-14ee-4f4c-9d3e-ff35cbbdca2f}">
+		<property name="startOffset">
+			<value>17</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{c541a7f2-dfbc-4a49-afd7-89716633a6ef}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{208304ed-cbf2-48e4-b2b7-bdd90db851fd}" />
 	<object class="MixerBusFader" id="{18a9482d-c8de-425e-a17d-5ddc34fe5396}" />
 </objects>
