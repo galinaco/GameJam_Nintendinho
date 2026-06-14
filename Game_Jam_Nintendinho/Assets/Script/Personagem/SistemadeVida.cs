@@ -5,7 +5,7 @@ public class SistemadeVida : MonoBehaviour
 {
     //variaveis
     [Header("Vida do Personagem")]
-    [SerializeField] float vida = 5f;
+    [SerializeField] public float vida {get; private set;} = 5f;
 
     //audio References
     [Header("Audio References")]
