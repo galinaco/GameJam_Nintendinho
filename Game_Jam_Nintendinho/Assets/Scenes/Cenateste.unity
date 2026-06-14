@@ -1315,69 +1315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jogador_ContaChaves
   chavespossuidas: 0
---- !u!114 &1764356936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764356927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6a536ac049c7db46b05334ac91bc402, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
-  attackEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  interactEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  collectKeyEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  doorOpenEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  hurtEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  deathEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  petrifyEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  movePersonagem: {fileID: 0}
-  sistemaDeVida: {fileID: 0}
 --- !u!1 &1853398107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,9 +1481,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7808151854829962731, guid: e86bb60a921aab946a3660ecfb8698f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1764356934}
-    - targetCorrespondingSourceObject: {fileID: 7808151854829962731, guid: e86bb60a921aab946a3660ecfb8698f3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1764356936}
     - targetCorrespondingSourceObject: {fileID: 7807332854087510222, guid: e86bb60a921aab946a3660ecfb8698f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1474868345}
