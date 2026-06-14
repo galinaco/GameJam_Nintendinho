@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1e86a5aa-2e74-4704-b550-6b0ed090eb28}">
+		<property name="assetPath">
+			<value>Audios/SFXs/CD_SFX_Player_Curse_Worsen.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.68786848072562357</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d5e5bcc8-b4cc-4449-9cc3-fae681dafc89}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 514499467363370149}
   - component: {fileID: 377929000278659656}
   - component: {fileID: 8837125908396753836}
+  - component: {fileID: 5766281517689925747}
+  - component: {fileID: 2980970527915619371}
+  - component: {fileID: 7298839523486094643}
   m_Layer: 0
   m_Name: Armadura
   m_TagString: Inimigo
@@ -155,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Classe_Inimigo
   poscamera: {x: 12.6, y: 0, z: -10}
   scriptmovimento: {fileID: 377929000278659656}
+  audioManager: {fileID: 0}
   vida: 5
   dano: 1
   velocidade: 1
@@ -244,3 +248,84 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5766281517689925747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427365134691103848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecca83b64142b44b8a5b2daa898cb28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmorAudioManager
+  hitSound:
+    Guid:
+      Data1: -2049246617
+      Data2: 1311330112
+      Data3: -871049341
+      Data4: 1577600350
+    Path: event:/SFXs/Enemies/Armor/Hurt
+--- !u!114 &2980970527915619371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427365134691103848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -749828524
+      Data2: 1261578892
+      Data3: 1613820823
+      Data4: -2114637943
+    Path: event:/SFXs/Enemies/Armor/Death
+  Event: 
+  EventPlayTrigger: 2
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7298839523486094643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427365134691103848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 1839861168
+      Data2: 1224423117
+      Data3: -323002994
+      Data4: -647105519
+    Path: event:/SFXs/Enemies/Armor/Attack
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

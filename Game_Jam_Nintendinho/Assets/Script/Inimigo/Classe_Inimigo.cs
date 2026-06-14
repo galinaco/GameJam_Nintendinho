@@ -4,9 +4,12 @@ using UnityEngine;
 public class Classe_Inimigo : MonoBehaviour
 {
     //variavel pra ativar o script do inimigo
-    [Header("Onde a camera tem que tá pra esse inimigo ativar")]
+    [Header("Onde a camera tem que tï¿½ pra esse inimigo ativar")]
     [SerializeField] Vector3 poscamera;
     [SerializeField] MonoBehaviour scriptmovimento;
+
+    // enemy audio manager    [Header("Audio Manager do inimigo")]
+    [SerializeField] ArmorAudioManager audioManager;
 
     
     //status base
@@ -22,6 +25,9 @@ public class Classe_Inimigo : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        //get reference do audio manager
+        audioManager = GetComponent<ArmorAudioManager>();
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class Classe_Inimigo : MonoBehaviour
     void DanoRecebido(float dano)
     {
         vida -= dano;
+        audioManager.PlayHitSound();
         StartCoroutine(feedbackmudacor());
         if (vida <= 0)
         {

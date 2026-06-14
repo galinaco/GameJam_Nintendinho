@@ -17,7 +17,7 @@ public class Move_Personagem : MonoBehaviour
     enum State { Idle, AndandoHorizontal, AndandoVertical, AtaqueEspada, DefesaEscudo }
     State estadoatual = State.Idle;
 
-    //movimentação base
+    //movimentaï¿½ï¿½o base
     [Header("Movimento Base")]
     Vector2 movimento = new Vector2();
     [SerializeField] float velocidadejogador = 5f;
@@ -46,11 +46,23 @@ public class Move_Personagem : MonoBehaviour
     [SerializeField] float tempoadefesaatual;
     [SerializeField] GameObject hitboxdefesa;
 
+
+    //audio references
+    [Header("Audio References")]
+    [SerializeField] private PlayerAudioManager playerAudioManager;
+    [SerializeField] public bool shot = false;
+    [SerializeField] public bool defended = false;
+    [SerializeField] public bool interacted = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         tempoataqueatual = tempototalataque;
         rg = GetComponent<Rigidbody2D>();
+
+        //finds playeraudio manager
+        playerAudioManager = FindFirstObjectByType<PlayerAudioManager>();
     }
 
     // Update is called once per frame
@@ -78,7 +90,7 @@ public class Move_Personagem : MonoBehaviour
 
 
 
-        //rotacionar a mira baseado no input de movimento, se não tiver input de movimento, rotacionar a mira baseado no ultimo input de movimento
+        //rotacionar a mira baseado no input de movimento, se nï¿½o tiver input de movimento, rotacionar a mira baseado no ultimo input de movimento
         if (inputmovimento != Vector2.zero)
         {
             ultimoinputmovimento = inputmovimento;
@@ -117,7 +129,7 @@ public class Move_Personagem : MonoBehaviour
         //comportamento do estado
         taandando = false;
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
         if (inputmovimento.x != 0)
         {
             estadoatual = State.AndandoHorizontal;
@@ -154,7 +166,7 @@ public class Move_Personagem : MonoBehaviour
 
         //Debug.Log("movimento horizontal: " + movimento * velocidadejogador * Time.fixedDeltaTime);
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
 
         if (movimento.x == 0)
         {
@@ -179,7 +191,7 @@ public class Move_Personagem : MonoBehaviour
         
         //Debug.Log("movimento vertical: " + movimento * velocidadejogador * Time.fixedDeltaTime);
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
         if (movimento.y == 0)
         {
             estadoatual = State.Idle;
@@ -203,7 +215,11 @@ public class Move_Personagem : MonoBehaviour
         hitboxataque.SetActive(true);
 
 
-        //transições de estado
+        //sets audio shot to true
+        //shot = true;
+
+
+        //transiï¿½ï¿½es de estado
 
         if (tempoataqueatual <= 0)
         {
@@ -233,7 +249,7 @@ public class Move_Personagem : MonoBehaviour
         hitboxdefesa.SetActive(true);
 
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
 
         if (tempoadefesaatual <= 0)
         {
