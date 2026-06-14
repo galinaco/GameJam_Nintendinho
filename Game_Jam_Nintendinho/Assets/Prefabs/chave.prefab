@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 167661394286762545}
   - component: {fileID: 8729212214931312179}
   - component: {fileID: 580578961354301855}
+  - component: {fileID: -4758901045198648047}
   m_Layer: 0
   m_Name: chave
   m_TagString: Untagged
@@ -154,3 +155,34 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &-4758901045198648047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332444374060214186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: jogador
+  EventReference:
+    Guid:
+      Data1: 277380973
+      Data2: 1103857421
+      Data3: 2015082395
+      Data4: 2053992902
+    Path: event:/SFXs/Scenery/Key Collect
+  Event: 
+  EventPlayTrigger: 2
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

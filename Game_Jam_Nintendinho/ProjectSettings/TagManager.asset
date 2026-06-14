@@ -8,6 +8,7 @@ TagManager:
   - Inimigo
   - Hazard
   - jogador
+  - GameManager
   layers:
   - Default
   - TransparentFX
