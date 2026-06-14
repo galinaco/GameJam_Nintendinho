@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Chaves : MonoBehaviour
 {
-    
+    GameObject GameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class Chaves : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("jogador"))
         {
-            collision.gameObject.GetComponent<Jogador_ContaChaves>().chavespossuidas++;
+            GameManager.GetComponent<Jogador_ContaChaves>().chavespossuidas++;
             Destroy(gameObject);
         }
     }
