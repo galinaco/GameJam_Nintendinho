@@ -330,8 +330,13 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - AMBIENCEs
+  - OSTs
+  - SFXs
+  - VOs
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
