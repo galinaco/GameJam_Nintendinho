@@ -5,7 +5,7 @@
 			<value>First Dungeon</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{01514196-3d3a-4182-a43b-bb13b79a20c2}</destination>
