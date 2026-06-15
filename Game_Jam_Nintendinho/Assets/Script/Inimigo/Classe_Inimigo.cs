@@ -7,6 +7,9 @@ public class Classe_Inimigo : MonoBehaviour
     [Header("Onde a camera tem que t� pra esse inimigo ativar")]
     [SerializeField] Vector3 poscamera;
     [SerializeField] MonoBehaviour scriptmovimento;
+    [SerializeField] SpriteRenderer sprite;
+    Collider2D colider;
+    Vector2 PosicaoInicial;
 
     // enemy audio manager    [Header("Audio Manager do inimigo")]
     [SerializeField] ArmorAudioManager audioManager;
@@ -17,6 +20,7 @@ public class Classe_Inimigo : MonoBehaviour
     [SerializeField] float vida = 5f;
     [SerializeField] float dano = 1f;
     [SerializeField] public float velocidade = 1f;
+    [SerializeField] float vidaref = 3f;
 
     //componentes
     [HideInInspector] public Rigidbody2D rb;
@@ -25,21 +29,29 @@ public class Classe_Inimigo : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        sprite = GetComponent<SpriteRenderer>();
+        colider = GetComponent<Collider2D>();
         //get reference do audio manager
         audioManager = GetComponent<ArmorAudioManager>();
+
+        PosicaoInicial = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x == poscamera.x &&
-            GameObject.FindGameObjectWithTag("MainCamera").transform.position.y == poscamera.y)
+        float dist = Vector3.Distance(GameObject.FindGameObjectWithTag("MainCamera").transform.position, poscamera);
+
+        if (dist < 0.1f)
         {
             scriptmovimento.enabled = true;
         }
         else
         {
+            transform.position = PosicaoInicial;
+            sprite.enabled = true;
+            colider.enabled = true;
+            vida = 5f;
             scriptmovimento.enabled = false;
         }
     }
@@ -62,7 +74,14 @@ public class Classe_Inimigo : MonoBehaviour
     }
     void Morrer()
     {
-        Destroy(gameObject);
+        sprite.enabled = false;
+        foreach (Collider2D col in GetComponents<Collider2D>())
+        {
+            col.enabled = false;
+        }
+
+       
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
