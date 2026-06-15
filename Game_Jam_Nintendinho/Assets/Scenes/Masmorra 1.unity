@@ -2658,11 +2658,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 531017205
-      Data2: 1276761226
-      Data3: -142100337
-      Data4: 851338993
-    Path: event:/SFXs/Scenery/Door Open
+      Data1: 1168191877
+      Data2: 1099199631
+      Data3: 1225895054
+      Data4: -205464221
+    Path: event:/SFXs/Scenery/Win Jingle
   Event: 
   EventPlayTrigger: 2
   EventStopTrigger: 0
@@ -4327,6 +4327,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6360447954610293087, guid: f2e4c8b7168f2e8409ffe3e1a4d3bfee, type: 3}
   m_PrefabInstance: {fileID: 757338869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &782807865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1936502100713587002, guid: f739b3ed498eda3458cf20ded6869629, type: 3}
+  m_PrefabInstance: {fileID: 1987625061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &782807867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782807865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2026269616
+      Data2: 1126018812
+      Data3: 534929061
+      Data4: 1929958204
+    Path: event:/SFXs/Scenery/Broke Jewel
+  Event: 
+  EventPlayTrigger: 12
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &782807870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782807865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: Gameplay State
+  TriggerEvent: 12
+  Value: 1
 --- !u!1001 &797719310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12253,6 +12305,7 @@ GameObject:
   - component: {fileID: 1225565443}
   - component: {fileID: 1225565442}
   - component: {fileID: 1225565444}
+  - component: {fileID: 1225565445}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameManager
@@ -12303,6 +12356,37 @@ MonoBehaviour:
   JoiaInteira: {fileID: 0}
   JoiaQuebrada: {fileID: 0}
   Joiaquebrada: 0
+--- !u!114 &1225565445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225565441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -835052562
+      Data2: 1158333968
+      Data3: 131343531
+      Data4: 579616354
+    Path: event:/OSTs/First Dungeon Dynamic
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1227520197
 GameObject:
   m_ObjectHideFlags: 0
@@ -152907,7 +152991,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1936502100713587002, guid: f739b3ed498eda3458cf20ded6869629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782807867}
+    - targetCorrespondingSourceObject: {fileID: 1936502100713587002, guid: f739b3ed498eda3458cf20ded6869629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782807870}
   m_SourcePrefab: {fileID: 100100000, guid: f739b3ed498eda3458cf20ded6869629, type: 3}
 --- !u!4 &1992750319 stripped
 Transform:

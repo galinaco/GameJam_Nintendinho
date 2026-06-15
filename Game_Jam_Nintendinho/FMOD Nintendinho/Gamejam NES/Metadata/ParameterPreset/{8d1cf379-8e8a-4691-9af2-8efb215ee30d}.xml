@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="ParameterPreset" id="{8d1cf379-8e8a-4691-9af2-8efb215ee30d}">
 		<property name="name">
-			<value>1D Gameplay State</value>
+			<value>Gameplay State</value>
 		</property>
 		<relationship name="folder">
-			<destination>{20ccc25e-c993-4b13-ab6c-a57d8049772e}</destination>
+			<destination>{23296731-5380-4009-aa67-e081c942413b}</destination>
 		</relationship>
 		<relationship name="parameter">
 			<destination>{5d5924b4-dd36-4e79-8d31-847bd55c21b9}</destination>
