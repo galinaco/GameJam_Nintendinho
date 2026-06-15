@@ -160,10 +160,7 @@ public class Move_Personagem : MonoBehaviour
         movimento = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         movimento.Normalize();
         rg.MovePosition(rg.position + movimento * velocidadejogador * Time.fixedDeltaTime);
-        
-
-
-
+  
         //Debug.Log("movimento horizontal: " + movimento * velocidadejogador * Time.fixedDeltaTime);
 
         //transi��es de estado
@@ -210,7 +207,7 @@ public class Move_Personagem : MonoBehaviour
     {
 
         tempoataqueatual -= Time.fixedDeltaTime;
-
+        
         //comportamento do estado
         hitboxataque.SetActive(true);
 
@@ -218,12 +215,13 @@ public class Move_Personagem : MonoBehaviour
         //sets audio shot to true
         //shot = true;
 
-
+       
         //transi��es de estado
 
         if (tempoataqueatual <= 0)
         {
             tempoataqueatual = tempototalataque;
+            
             hitboxataque.SetActive(false);
             if (inputmovimento.x != 0)
             {
@@ -244,7 +242,7 @@ public class Move_Personagem : MonoBehaviour
     {
 
         tempoadefesaatual -= Time.fixedDeltaTime;
-
+        inputmovimento = Vector2.zero;
         //comportamento do estado
         hitboxdefesa.SetActive(true);
 

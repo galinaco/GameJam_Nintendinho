@@ -7,6 +7,9 @@ public class Classe_Inimigo : MonoBehaviour
     [Header("Onde a camera tem que t� pra esse inimigo ativar")]
     [SerializeField] Vector3 poscamera;
     [SerializeField] MonoBehaviour scriptmovimento;
+    [SerializeField] SpriteRenderer sprite;
+    Collider2D colider;
+    Vector2 PosicaoInicial;
 
     // enemy audio manager    [Header("Audio Manager do inimigo")]
     [SerializeField] ArmorAudioManager audioManager;
@@ -25,9 +28,12 @@ public class Classe_Inimigo : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        sprite = GetComponent<SpriteRenderer>();
+        colider = GetComponent<Collider2D>();
         //get reference do audio manager
         audioManager = GetComponent<ArmorAudioManager>();
+
+        PosicaoInicial = transform.position;
     }
 
     // Update is called once per frame
@@ -40,6 +46,10 @@ public class Classe_Inimigo : MonoBehaviour
         }
         else
         {
+            transform.position = PosicaoInicial;
+            sprite.enabled = true;
+            colider.enabled = true;
+            vida = 5f;
             scriptmovimento.enabled = false;
         }
     }
@@ -62,7 +72,14 @@ public class Classe_Inimigo : MonoBehaviour
     }
     void Morrer()
     {
-        Destroy(gameObject);
+        sprite.enabled = false;
+        foreach (Collider2D col in GetComponents<Collider2D>())
+        {
+            col.enabled = false;
+        }
+
+       
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
