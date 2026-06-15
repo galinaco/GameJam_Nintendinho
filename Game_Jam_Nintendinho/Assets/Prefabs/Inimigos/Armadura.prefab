@@ -185,7 +185,7 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   vida: 3
   dano: 1
-  velocidade: 1
+  velocidade: 0.75
   vidaref: 3
   rb: {fileID: 0}
 --- !u!61 &514499467363370149

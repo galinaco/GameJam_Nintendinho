@@ -1,6 +1,4 @@
-﻿using UnityEditor.ShaderGraph.Internal;
-using UnityEngine;
-using UnityEngine.U2D;
+﻿using UnityEngine;
 
 public class Move_Personagem_Invertido : MonoBehaviour
 {

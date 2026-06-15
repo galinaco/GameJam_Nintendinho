@@ -1186,10 +1186,10 @@ MonoBehaviour:
     Path: event:/OSTs/Title Screen
   buttonClickSound:
     Guid:
-      Data1: -1657376731
-      Data2: 1096773026
-      Data3: -1274734689
-      Data4: -1043297288
+      Data1: 364282144
+      Data2: 1177443197
+      Data3: -1482593128
+      Data4: 350976415
     Path: event:/SFXs/Title/Buttons
 --- !u!4 &1627281266
 Transform:

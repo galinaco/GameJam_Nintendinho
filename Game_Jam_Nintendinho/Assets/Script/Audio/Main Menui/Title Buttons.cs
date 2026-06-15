@@ -1,8 +1,8 @@
 using UnityEngine;
-using FMOD;
 using FMODUnity;
 using FMOD.Studio;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class TitleButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {   
@@ -14,9 +14,11 @@ public class TitleButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private EventInstance buttonHoverInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        buttonClickSound = RuntimeManager.PathToEventReference("event:/SFXs/Title/Buttons");
-        buttonHoverSound = RuntimeManager.PathToEventReference("event:/SFXs/Title/Hower");
+    {   if(SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            buttonClickSound = RuntimeManager.PathToEventReference("event:/SFXs/Title/Buttons");
+            buttonHoverSound = RuntimeManager.PathToEventReference("event:/SFXs/Title/Hower");
+        }
     }
 
     // Update is called once per frame
