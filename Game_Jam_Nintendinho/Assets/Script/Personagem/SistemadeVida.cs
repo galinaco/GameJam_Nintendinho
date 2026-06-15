@@ -67,7 +67,11 @@ public class SistemadeVida : MonoBehaviour
 
             DanoRecebido(1f);
         }
+
+
     }
+
+    
 
     IEnumerator AplicarKnockback(Vector2 direcao)
     {
