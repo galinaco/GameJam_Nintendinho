@@ -12645,6 +12645,14 @@ PrefabInstance:
       propertyPath: forcanockback
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7892790623834555644, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892790623834555644, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9163157020479072008, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
       propertyPath: m_Name
       value: jogador True

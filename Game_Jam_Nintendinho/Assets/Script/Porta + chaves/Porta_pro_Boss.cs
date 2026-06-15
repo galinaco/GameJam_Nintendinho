@@ -8,7 +8,7 @@ public class Porta_pro_Boss : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("jogador"))
         {
-           SceneManager.LoadScene("Boss");
+           SceneManager.LoadScene("Vitoria");
         }
     }
 }
