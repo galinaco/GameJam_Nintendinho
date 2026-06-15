@@ -9,11 +9,16 @@ public class MoveArmaduraViva : MonoBehaviour
     enum State { Idle, AndandoHorizontal, AndandoVertical}
     State estadoatual = State.Idle;
     Classe_Inimigo inimigo; 
+    private Animator animator;
+    private Vector2Int ultimaDirecao;
+    private SpriteRenderer sprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         inimigo = GetComponent<Classe_Inimigo>();
-
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        ultimaDirecao = Vector2Int.down;
 
     }
 
@@ -37,11 +42,38 @@ public class MoveArmaduraViva : MonoBehaviour
         }
     }
 
+    void IdleAnimations()
+    {
+        if (ultimaDirecao == Vector2Int.right)
+        {
+            sprite.flipX = false;
+            animator.Play("Idle Sides");
+        }
+        else if (ultimaDirecao == Vector2Int.left)
+        {
+            sprite.flipX = true;
+            animator.Play("Idle Sides");
+        }
+        else if (ultimaDirecao == Vector2Int.up)
+        {
+            animator.Play("Idle Up");
+        }   
+        else if (ultimaDirecao == Vector2Int.down)
+        {
+            animator.Play("Idle Down");
+        }
+        else
+        {
+            sprite.flipX = false;
+            animator.Play("Idle Sides");
+        }
+    }
+
     void Idle ()
     {
         //comportamento de estado
-
-        //transição de estado
+            IdleAnimations();
+        //transiï¿½ï¿½o de estado
         if (transform.position.x != GameObject.FindGameObjectWithTag("jogador").transform.position.x)
         {
             estadoatual = State.AndandoHorizontal;
@@ -56,11 +88,25 @@ public class MoveArmaduraViva : MonoBehaviour
     {
         //comportamento de estado
         direcao = new Vector2((GameObject.FindGameObjectWithTag("jogador").transform.position.x - transform.position.x),0).normalized;
+
+        if (direcao.x > 0)
+        {
+            sprite.flipX = false;
+            animator.Play("Walking Sides");
+            ultimaDirecao = Vector2Int.right;
+        }
+            
+        else if (direcao.x < 0)
+        {
+            sprite.flipX = true;
+            animator.Play("Walking Sides");
+            ultimaDirecao = Vector2Int.left;
+        }
         inimigo.rb.MovePosition(inimigo.rb.position + direcao * inimigo.velocidade * Time.fixedDeltaTime);
         
 
 
-        //transição de estado
+        //transiï¿½ï¿½o de estado
         if (Mathf.Abs(transform.position.x - GameObject.FindGameObjectWithTag("jogador").transform.position.x) < 0.1f)
         {
             if (Mathf.Abs(transform.position.y - GameObject.FindGameObjectWithTag("jogador").transform.position.y)> 0.1f)
@@ -78,9 +124,21 @@ public class MoveArmaduraViva : MonoBehaviour
     {
         //comportamento de estado
         direcao = new Vector2(0, (GameObject.FindGameObjectWithTag("jogador").transform.position.y - transform.position.y)).normalized;
+
+        if (direcao.y > 0)
+        {
+            animator.Play("Walking Up");
+            ultimaDirecao = Vector2Int.up;
+        }
+        else if (direcao.y < 0)
+        {
+            animator.Play("Walking Down");
+            ultimaDirecao = Vector2Int.down;
+        }
+
         inimigo.rb.MovePosition(inimigo.rb.position + direcao * inimigo.velocidade * Time.fixedDeltaTime);
 
-        //transição de estado
+        //transiï¿½ï¿½o de estado
         if (Mathf.Abs(transform.position.y - GameObject.FindGameObjectWithTag("jogador").transform.position.y) < 0.1f)
         {
             if (Mathf.Abs(transform.position.x - GameObject.FindGameObjectWithTag("jogador").transform.position.x) > 0.1f)
