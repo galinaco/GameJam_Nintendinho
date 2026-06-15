@@ -20,11 +20,8 @@ public class MoveArmaduraViva : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(estadoatual);
-        if (transform.position.x == GameObject.FindGameObjectWithTag("jogador").transform.position.x)
-        {
-            Debug.Log("x igual");
-        }
+       
+        
         //troca de estados
         
     }
