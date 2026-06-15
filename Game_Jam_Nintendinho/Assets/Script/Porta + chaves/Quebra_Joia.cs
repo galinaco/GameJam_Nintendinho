@@ -4,7 +4,7 @@ public class Quebra_Joia : MonoBehaviour
 {
     [SerializeField] GameObject JoiaInteira;
     [SerializeField] GameObject JoiaQuebrada;
-
+    [SerializeField] Move_Personagem movimentojogador;
     [SerializeField] public bool Joiaquebrada = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,10 @@ public class Quebra_Joia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       if(Joiaquebrada)
+       {
+            //movimentojogador.velocidadejogador = -movimentojogador.velocidadejogador;
+       }
     }
 
     private void OnTriggernEnter2D(Collision2D collision)

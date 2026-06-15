@@ -21,7 +21,7 @@ public class Move_Personagem : MonoBehaviour
     //movimenta��o base
     [Header("Movimento Base")]
     Vector2 movimento = new Vector2();
-    [SerializeField] float velocidadejogador = 5f;
+    [SerializeField] public float velocidadejogador = 5f;
     [HideInInspector] public Vector2 inputmovimento = new Vector2();
 
     //Yuri
