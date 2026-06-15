@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SistemadeVida : MonoBehaviour
 {
@@ -45,6 +47,7 @@ public class SistemadeVida : MonoBehaviour
     }
     void Morrer()
     {
+        SceneManager.LoadScene("Game over");
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
