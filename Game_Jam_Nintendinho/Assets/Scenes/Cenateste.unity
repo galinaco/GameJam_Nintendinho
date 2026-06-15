@@ -1520,6 +1520,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1199901960240562942, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3721591245289644043, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.57
@@ -1560,9 +1564,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3960746233524130882, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960746233524130882, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920188163742370586, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378368167719198280, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: forcanockback
+      value: 1e+30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728673330358280053, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9163157020479072008, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
       propertyPath: m_Name
       value: jogador
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163157020479072008, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9163157020479072008, guid: 1a9a2e75355364d4895ce670f5f48906, type: 3}
       propertyPath: m_TagString
@@ -1629,13 +1657,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armadura
       objectReference: {fileID: 0}
+    - target: {fileID: 8427365134691103848, guid: b8ec80ee08b7dbb46904a792e0c9eb33, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8837125908396753836, guid: b8ec80ee08b7dbb46904a792e0c9eb33, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837125908396753836, guid: b8ec80ee08b7dbb46904a792e0c9eb33, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8837125908396753836, guid: b8ec80ee08b7dbb46904a792e0c9eb33, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837125908396753836, guid: b8ec80ee08b7dbb46904a792e0c9eb33, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

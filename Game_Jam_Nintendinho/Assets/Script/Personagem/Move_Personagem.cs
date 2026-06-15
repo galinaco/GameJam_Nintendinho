@@ -6,7 +6,7 @@ public class Move_Personagem : MonoBehaviour
 {
 
     //componentes 
-    Rigidbody2D rg;
+    [HideInInspector]public Rigidbody2D rg;
     SpriteRenderer sprite;
     [SerializeField] private Animator animator;
 
@@ -22,7 +22,7 @@ public class Move_Personagem : MonoBehaviour
     [Header("Movimento Base")]
     Vector2 movimento = new Vector2();
     [SerializeField] float velocidadejogador = 5f;
-    Vector2 inputmovimento = new Vector2();
+    [HideInInspector] public Vector2 inputmovimento = new Vector2();
 
     //Yuri
     int lastdirectionx;
@@ -34,8 +34,8 @@ public class Move_Personagem : MonoBehaviour
     //inputs
     bool inputhorizontal;
     bool inputvertical;
-    bool inputataque;
-    bool inputdefesa;
+    [HideInInspector] public bool inputataque;
+    [HideInInspector] public bool inputdefesa;
     //mira
     Vector2 ultimoinputmovimento;
     [SerializeField] Transform mira;
