@@ -20,6 +20,7 @@ public class Classe_Inimigo : MonoBehaviour
     [SerializeField] float vida = 5f;
     [SerializeField] float dano = 1f;
     [SerializeField] public float velocidade = 1f;
+    [SerializeField] float vidaref = 3f;
 
     //componentes
     [HideInInspector] public Rigidbody2D rb;
@@ -39,8 +40,9 @@ public class Classe_Inimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x == poscamera.x &&
-            GameObject.FindGameObjectWithTag("MainCamera").transform.position.y == poscamera.y)
+        float dist = Vector3.Distance(GameObject.FindGameObjectWithTag("MainCamera").transform.position, poscamera);
+
+        if (dist < 0.1f)
         {
             scriptmovimento.enabled = true;
         }

@@ -147,7 +147,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199901960240562942}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -348,7 +348,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4920188163742370586}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -636,8 +636,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1932a9165f7548439ac3c3a00819197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move_Personagem
+  rg: {fileID: 0}
   animator: {fileID: 0}
+  estadoatual: 0
   velocidadejogador: 5
+  inputmovimento: {x: 0, y: 0}
+  inputataque: 0
+  inputdefesa: 0
   mira: {fileID: 2916688052635506702}
   tempototalataque: 1
   tempoataqueatual: 0
@@ -661,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1dd184d6d49dc47a852173ae11db46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SistemadeVida
+  forcanockback: 5
   playerAudioManager: {fileID: 0}
 --- !u!114 &697733336808622405
 MonoBehaviour:
