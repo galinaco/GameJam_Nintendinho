@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("Cenateste");
+        SceneManager.LoadScene("Masmorra 1");
     }
     public void QuitGame()
     {
