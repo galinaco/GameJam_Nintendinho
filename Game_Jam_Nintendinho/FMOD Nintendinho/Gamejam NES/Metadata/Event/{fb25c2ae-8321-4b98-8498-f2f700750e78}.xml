@@ -5,7 +5,7 @@
 			<value>Game Win Jingle</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e3ddc8f2-33ff-4bd0-922a-90bdff06d92f}</destination>
@@ -82,7 +82,11 @@
 			<destination>{d01cf833-4c00-4e9d-bbb1-35bda4c7c4f6}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{3085becd-a44c-4464-8e62-b0fb49e29672}" />
+	<object class="MultiSound" id="{3085becd-a44c-4464-8e62-b0fb49e29672}">
+		<relationship name="sounds">
+			<destination>{b65012c6-d2bc-4fb7-8c90-ff8f3c8d5a72}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{e327d416-0a39-45c7-96cb-b550c1b3f225}">
 		<relationship name="effects">
 			<destination>{d080eea6-ac3c-4e3b-aaad-2bffd41844af}</destination>
@@ -95,6 +99,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{45a97f11-21bb-460e-8ca5-60ab0df47591}" />
+	<object class="SingleSound" id="{b65012c6-d2bc-4fb7-8c90-ff8f3c8d5a72}">
+		<relationship name="audioFile">
+			<destination>{f1c51d35-8218-4da9-9324-8e66c5e29ddb}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{d080eea6-ac3c-4e3b-aaad-2bffd41844af}" />
 	<object class="MixerBusFader" id="{bf58a4f0-7c0f-465d-aec9-665947f7642d}" />
 </objects>

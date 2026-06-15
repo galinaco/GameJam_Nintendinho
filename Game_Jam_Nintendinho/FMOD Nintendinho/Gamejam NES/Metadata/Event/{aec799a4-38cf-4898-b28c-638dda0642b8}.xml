@@ -5,7 +5,7 @@
 			<value>Petrify</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{56b3c8ee-5bdd-4e39-b8cb-d74716120631}</destination>
@@ -82,7 +82,11 @@
 			<destination>{900a134e-e1f0-41fa-81cd-1cb3391e05a6}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{0f075d5b-c805-491b-aa0d-5fe4332d1c00}" />
+	<object class="MultiSound" id="{0f075d5b-c805-491b-aa0d-5fe4332d1c00}">
+		<relationship name="sounds">
+			<destination>{42ced454-7629-4abe-95e4-def46fc40cd3}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{6a312766-5053-47bc-9a5f-8e7f1a953734}">
 		<relationship name="effects">
 			<destination>{e8836b51-71eb-4d65-840b-c116114a3d0c}</destination>
@@ -95,6 +99,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a5efa89d-2aae-4ce9-aded-c0d3fd51c36d}" />
+	<object class="SingleSound" id="{42ced454-7629-4abe-95e4-def46fc40cd3}">
+		<relationship name="audioFile">
+			<destination>{eca7faff-f4c1-4574-89e4-4406f9ef3a14}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{e8836b51-71eb-4d65-840b-c116114a3d0c}" />
 	<object class="MixerBusFader" id="{83214e53-815c-4b40-a4f4-bc2553c9baee}" />
 </objects>

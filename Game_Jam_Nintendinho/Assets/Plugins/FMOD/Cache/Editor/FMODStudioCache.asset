@@ -474,7 +474,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639170600745139706
+  lastModified: 639170590606983819
   FileSizes:
   - Name: 
     Value: 2824
@@ -683,7 +683,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/VOs.bank
   Name: VOs
   StudioPath: bank:/VOs
-  lastModified: 639170600745347033
+  lastModified: 639170590607016986
   FileSizes: []
   Exists: 1
 --- !u!114 &-2707698471677516821
@@ -863,7 +863,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/AMBIENCEs.bank
   Name: AMBIENCEs
   StudioPath: bank:/AMBIENCEs
-  lastModified: 639170600745034125
+  lastModified: 639170590606956879
   FileSizes: []
   Exists: 1
 --- !u!114 &-1022630111887441343
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -4019472016968800158}
   cacheVersion: 131859
-  cacheTime: 639170600745347033
+  cacheTime: 639170590607016986
   SerializableEventsDict:
   - key: event:/Ambiences/Dungeon
     index: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 639170600745250279
+  lastModified: 639170590607011985
   FileSizes: []
   Exists: 1
 --- !u!114 &963397528806105259
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/OSTs.bank
   Name: OSTs
   StudioPath: bank:/OSTs
-  lastModified: 639170600745235136
+  lastModified: 639170590606996985
   FileSizes: []
   Exists: 1
 --- !u!114 &4897387537113944412
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   Path: FMOD Nintendinho/Gamejam NES/FMODBUILD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639170600745124650
+  lastModified: 639170590606978208
   FileSizes: []
   Exists: 1
 --- !u!114 &5014354234613587003
