@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Quebra_Joia : MonoBehaviour
@@ -7,6 +8,7 @@ public class Quebra_Joia : MonoBehaviour
     [SerializeField] Move_Personagem movimentojogador;
     [SerializeField] Move_Personagem_Invertido movimentoinvertido;
     [SerializeField] public bool Joiaquebrada = false;
+    [SerializeField] GameObject Curse;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +36,13 @@ public class Quebra_Joia : MonoBehaviour
             Joiaquebrada = true;
             JoiaInteira.SetActive(false);
             JoiaQuebrada.SetActive(true);
+            Curse.SetActive(true);
+            StartCoroutine(Espera());
         }
+    }
+    IEnumerator Espera()
+    {
+        yield return new WaitForSeconds(3f);
+        Curse.SetActive(false);
     }
 }
