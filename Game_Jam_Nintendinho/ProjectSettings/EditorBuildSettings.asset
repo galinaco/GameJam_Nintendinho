@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: a4b797ca200545b44b67cd471d0db00b
+  - enabled: 1
     path: Assets/Scenes/Cenateste.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Masmorra 1.unity
+    guid: f08fa8ac3cb66ea43a01855b2ccd0cda
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: e8bbf3fd1b959b145805676a3bd2610c
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 562cf3b819011db4aba7bc02731533dd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
