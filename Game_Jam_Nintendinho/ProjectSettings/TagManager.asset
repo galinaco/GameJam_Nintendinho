@@ -9,6 +9,7 @@ TagManager:
   - Hazard
   - jogador
   - GameManager
+  - Joia
   layers:
   - Default
   - TransparentFX
