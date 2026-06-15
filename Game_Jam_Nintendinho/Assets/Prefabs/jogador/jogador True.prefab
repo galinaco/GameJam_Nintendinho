@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1199901960240562942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7999, z: 0}
+  m_LocalPosition: {x: 0, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 0.23674537, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,9 +226,9 @@ Transform:
   m_GameObject: {fileID: 4920188163742370586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -0.74, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2916688052635506702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -441,6 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3721591245289644043}
   - component: {fileID: 2423744865577294918}
+  - component: {fileID: 7156055510598594302}
   - component: {fileID: 301337692939618495}
   - component: {fileID: 3960746233524130882}
   - component: {fileID: 1655766963184786135}
@@ -517,8 +518,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.3347761, g: 1, b: 0.1745283, a: 1}
+  m_Sprite: {fileID: 820671305504059567, guid: 152247f09fd20ad4a8b6893074eb2987, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -528,6 +529,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7156055510598594302
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163157020479072008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 101700659aa05b64abbb5e8212bf2db3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &301337692939618495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -566,13 +589,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5833333, y: 0.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.31, y: 0.45}
   m_EdgeRadius: 0
 --- !u!50 &3960746233524130882
 Rigidbody2D:
@@ -613,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1932a9165f7548439ac3c3a00819197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move_Personagem
+  animator: {fileID: 0}
   velocidadejogador: 5
   mira: {fileID: 2916688052635506702}
   tempototalataque: 1
