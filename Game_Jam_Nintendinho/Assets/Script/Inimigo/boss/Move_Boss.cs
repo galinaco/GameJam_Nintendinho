@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move_Boss : MonoBehaviour
 {
-    Transform[] pontos; // Array de pontos de caminho para o boss seguir
+    [SerializeField] Transform[] pontos; // Array de pontos de caminho para o boss seguir
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
