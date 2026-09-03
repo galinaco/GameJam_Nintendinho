@@ -12,5 +12,5 @@ Cursed Dungeons é um jogo desenvolvido para a Nes Gamejam, inspirado principalm
 <img width="951" height="835" alt="image" src="https://github.com/user-attachments/assets/7f521cbb-9647-43e4-8562-236e687a2ad6" />
 
 # Link Do Itch.io
-
+https://danieu87.itch.io/cursed-dungeons
 
